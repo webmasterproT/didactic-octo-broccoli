@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles | Chase White Rabbit</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../podcast/index.html">Podcast</a></li>
+                <li><a href="../videos/index.html">Videos</a></li>
+                <li><a href="../forum/index.html">Forum</a></li>
+                <li><a href="../subscribe/index.html">Subscribe</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="articleList" class="parallax">
+        <section class="topic" onclick="location.href='legislation.html';">
+            <img src="../assets/images/topic_legislation.png" alt="Legislation">
+            <h2>Legislation</h2>
+            <p>Explore the intricacies of laws that shape our society.</p>
+        </section>
+        <section class="topic" onclick="location.href='justice.html';">
+            <img src="../assets/images/topic_justice.png" alt="Justice">
+            <h2>Justice</h2>
+            <p>Delve into discussions about fairness and equity.</p>
+        </section>
+        <!-- More sections for each topic -->
+        <!-- ... -->
+    </main>
+
+    <footer id="footerNavigation">
+        <ul>
+            <li><a href="../subscribe/index.html">Subscribe</a></li>
+            <li><a href="../privacy.html">Privacy</a></li>
+            <li><a href="../legal.html">Legal</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../disclaimer.html">Disclaimer</a></li>
+            <li><a href="../sitemap.html">Site Map</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../feedback.html">Feedback</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // Redirect to home page if accessed via search engine
+        if (document.referrer.includes('google') || document.referrer.includes('bing') || document.referrer.includes('yahoo')) {
+            redirectToHomePage();
+        }
+    </script>
+</body>
+</html>

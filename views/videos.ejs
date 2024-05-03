@@ -1,0 +1,32 @@
+<% include ../partials/header.ejs %>
+
+<div class="video-container">
+    <h1>Explore Our Videos</h1>
+    <p>Delve into a visual journey through thought-provoking topics and alternative perspectives.</p>
+    <div id="videoGallery">
+        <% videos.forEach(function(video) { %>
+            <div class="video-card">
+                <video id="videoPlayer<%= video._id %>" controls poster="<%= video.thumbnail %>">
+                    <source src="<%= video.url %>" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-info">
+                    <h2><%= video.title %></h2>
+                    <p><%= video.description %></p>
+                    <button onclick="notifyViewed('<%= video._id %>')">I've Watched This</button>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<% include ../partials/footer.ejs %>
+
+<script src="/public/js/videoPlayer.js"></script>
+<script>
+    function notifyViewed(videoId) {
+        // Placeholder for notifying the view event to the server
+        console.log('Video with ID ' + videoId + ' was viewed.');
+        // Actual implementation would involve an AJAX call to the server
+    }
+</script>

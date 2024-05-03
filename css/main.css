@@ -1,0 +1,201 @@
+/* Main Stylesheet for ChaseWhiteRabbit.com */
+
+/* Reset some basic elements */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Global Styles */
+body {
+	font-family: 'Arial', sans-serif;
+	background-color: #000;
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* Landing Page Animation */
+#animationCanvas {
+	background-color: #000;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+
+/* Red Pill Button */
+#redPillButton {
+	display: block;
+	width: 200px;
+	height: 50px;
+	background-color: #000;
+	color: #fff;
+	border: 2px solid #ff0000;
+	margin: 50px auto;
+	text-align: center;
+	line-height: 46px;
+	font-size: 1.2em;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+#redPillButton:hover {
+	background-color: #ff0000;
+	color: #000;
+}
+
+/* Invisible Rabbit Hole Button */
+#rabbitHoleButton {
+	opacity: 0;
+	position: absolute;
+	width: 200px;
+	height: 50px;
+	cursor: pointer;
+	transition: opacity 0.5s;
+}
+
+#rabbitHoleButton:hover {
+	opacity: 1;
+}
+
+/* Articles Page */
+.articles-section {
+	padding: 20px;
+}
+
+.article-topic {
+	margin-bottom: 30px;
+}
+
+.article-preview {
+	background-color: #1c1c1c;
+	padding: 15px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.article-preview:hover {
+	background-color: #333;
+}
+
+/* Podcast and Video Pages */
+.media-player {
+	margin: 20px auto;
+	max-width: 800px;
+}
+
+/* User Interaction and Community */
+.forum-container {
+	padding: 20px;
+}
+
+.forum-topic {
+	background-color: #1c1c1c;
+	padding: 15px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.forum-topic:hover {
+	background-color: #333;
+}
+
+/* Footer Navigation */
+footer {
+	background-color: #1c1c1c;
+	padding: 20px;
+	text-align: center;
+}
+
+footer a {
+	color: #fff;
+	padding: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	#redPillButton {
+		width: 150px;
+		height: 40px;
+		line-height: 38px;
+		font-size: 1em;
+	}
+
+	.media-player,
+	.forum-container {
+		width: 90%;
+		margin: 20px auto;
+	}
+}
+
+/* Accessibility Enhancements */
+:focus {
+	outline: 3px solid #ff0000;
+}
+
+/* Load Time Optimization */
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Minimalist Design Focus */
+.content-area {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+/* Additional Styles */
+/* Feel free to add any additional styles that you think might be relevant or helpful for the user experience */

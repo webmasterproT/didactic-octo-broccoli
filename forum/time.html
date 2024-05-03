@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Discussion Forum | ChaseWhiteRabbit.com</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/forum.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="footerNavigation">
+                <li><a href="/subscribe/index.html">Subscribe</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/legal.html">Legal</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/disclaimer.html">Disclaimer</a></li>
+                <li><a href="/sitemap.html">Site Map</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="forum-section">
+            <h1>Time Discussion Forum</h1>
+            <div id="forumContainer">
+                <!-- Forum topics will be dynamically loaded here -->
+            </div>
+            <button id="addTopicButton" onclick="displayAddTopicForm()">Add Topic</button>
+            <div id="addTopicForm" style="display:none;">
+                <form onsubmit="handleNewTopic(event)">
+                    <label for="topicTitle">Title:</label>
+                    <input type="text" id="topicTitle" name="topicTitle" required>
+                    <label for="topicContent">Content:</label>
+                    <textarea id="topicContent" name="topicContent" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 ChaseWhiteRabbit.com</p>
+    </footer>
+</body>
+</html>

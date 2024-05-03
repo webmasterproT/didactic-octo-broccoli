@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe | ChaseWhiteRabbit.com</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/subscription.js"></script>
+</head>
+<body>
+    <div class="subscription-container">
+        <h1>Join the Chase</h1>
+        <p>Subscribe to ChaseWhiteRabbit.com to stay updated on new content and forum discussions.</p>
+        <form id="subscribeForm" action="/subscribe" method="POST">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="subscribeReason">Why do you want to subscribe? (optional)</label>
+            <textarea id="subscribeReason" name="subscribeReason" maxlength="10000"></textarea>
+            
+            <div class="checkbox-container">
+                <input type="checkbox" id="signUp" name="signUp">
+                <label for="signUp">I also want to sign up for an account</label>
+            </div>
+            
+            <div id="signUpReasonContainer" style="display: none;">
+                <label for="signUpReason">Why do you want to sign up? (500-10000 characters)</label>
+                <textarea id="signUpReason" name="signUpReason" minlength="500" maxlength="10000"></textarea>
+            </div>
+            
+            <button type="submit" onclick="handleSubscription()">Subscribe</button>
+        </form>
+    </div>
+
+    <footer id="footerNavigation">
+        <ul>
+            <li><a href="../privacy.html">Privacy</a></li>
+            <li><a href="../legal.html">Legal</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../disclaimer.html">Disclaimer</a></li>
+            <li><a href="../sitemap.html">Site Map</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../feedback.html">Feedback</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // Show sign up reason if the sign up checkbox is checked
+        document.getElementById('signUp').addEventListener('change', function() {
+            var signUpReasonContainer = document.getElementById('signUpReasonContainer');
+            if (this.checked) {
+                signUpReasonContainer.style.display = 'block';
+            } else {
+                signUpReasonContainer.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chase White Rabbit</title>
+    <link rel="stylesheet" href="/public/css/main.css">
+    <script src="/public/js/animation.js"></script>
+    <script src="/public/js/interactivity.js"></script>
+</head>
+<body>
+    <div id="animationCanvas"></div>
+    <div id="mainContent" class="hidden">
+        <button id="redPillButton" class="red-pill">The Red Pill</button>
+        <div id="aboutSection" class="hidden">
+            <p>Tia Astor is a human and she set up this site for other humans. Unfortunately the world we live in has been structured by a mad hatter. If you are tired of attending the tea party, you are not alone.</p>
+            <div id="marchingStickFigures"></div>
+            <div id="rabbitHoleSection" class="hidden">
+                <button id="rabbitHoleButton" class="rabbit-hole">Enter the Rabbit Hole</button>
+            </div>
+        </div>
+    </div>
+    <footer id="footerNavigation">
+        <ul>
+            <li><a href="/subscribe/index.html">Subscribe</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+            <li><a href="/legal.html">Legal</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/disclaimer.html">Disclaimer</a></li>
+            <li><a href="/sitemap.html">Site Map</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/feedback.html">Feedback</a></li>
+        </ul>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initAnimation();
+            document.getElementById('redPillButton').addEventListener('click', handleRedPillClick);
+            document.getElementById('rabbitHoleButton').addEventListener('mouseover', handleRabbitHoleHover);
+            document.getElementById('rabbitHoleButton').addEventListener('click', handleRabbitHoleClick);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<% include partials/header.ejs %>
+
+<main id="forumContainer" class="forum-container">
+    <h1>Forum Discussions</h1>
+    <section class="forum-topics">
+        <% if (topics && topics.length > 0) { %>
+            <% topics.forEach(function(topic) { %>
+                <article class="forum-topic">
+                    <h2><%= topic.title %></h2>
+                    <p><%= topic.description %></p>
+                    <a href="/forum/<%= topic.slug %>" class="expand-topic">Read More</a>
+                    <div class="topic-interactions">
+                        <button onclick="likeTopic('<%= topic._id %>')" class="like-button">Like</button>
+                        <button onclick="replyTopic('<%= topic._id %>')" class="reply-button">Reply</button>
+                    </div>
+                </article>
+            <% }) %>
+        <% } else { %>
+            <p>No topics to display. Be the first to start a discussion!</p>
+        <% } %>
+    </section>
+    <section class="add-topic">
+        <h2>Add a New Topic</h2>
+        <form id="addTopicForm" action="/forum/add-topic" method="POST">
+            <input type="text" name="title" placeholder="Topic Title" required>
+            <textarea name="description" placeholder="Topic Description" required></textarea>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </section>
+    <section class="trending-topics">
+        <h2>Trending Topics</h2>
+        <div class="trending-list">
+            <% if (trending && trending.length > 0) { %>
+                <% trending.forEach(function(topic) { %>
+                    <a href="/forum/<%= topic.slug %>" class="trending-topic">
+                        <span><%= topic.title %></span>
+                    </a>
+                <% }) %>
+            <% } else { %>
+                <p>Check back later for trending discussions.</p>
+            <% } %>
+        </div>
+    </section>
+</main>
+
+<% include partials/footer.ejs %>
+
+<script src="/js/forum.js"></script>

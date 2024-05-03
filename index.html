@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chase White Rabbit</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/animation.js" defer></script>
+    <script src="js/interactivity.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <div id="animationCanvas">
+        <!-- Bunny animation will be rendered here by the animation.js script -->
+    </div>
+    <div id="landingContent" style="display:none;">
+        <button id="redPillButton" onclick="handleRedPillClick()">
+            <img src="assets/images/redpill_button.png" alt="The Red Pill">
+        </button>
+    </div>
+    <div id="rabbitHoleTriggerArea" onmouseover="handleRabbitHoleHover()" onclick="handleRabbitHoleClick()">
+        <!-- Invisible button area for "Enter the Rabbit Hole" -->
+    </div>
+    <footer id="footerNavigation">
+        <ul>
+            <li><a href="subscribe/index.html">Subscribe</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="legal.html">Legal</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="sitemap.html">Site Map</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

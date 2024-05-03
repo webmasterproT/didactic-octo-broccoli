@@ -1,0 +1,28 @@
+<% include ../partials/head.ejs %>
+
+<div class="podcast-container">
+    <h1>Podcasts</h1>
+    <p>Explore our collection of podcasts that delve into the depths of societal topics and alternative viewpoints.</p>
+    <div id="podcastList">
+        <% podcasts.forEach(function(podcast) { %>
+            <div class="podcast">
+                <img src="<%= podcast.image %>" alt="<%= podcast.title %>">
+                <div class="podcast-info">
+                    <h2><%= podcast.title %></h2>
+                    <p><%= podcast.description %></p>
+                    <button onclick="initPodcastPlayer('<%= podcast.file %>', this)">Play</button>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<% include ../partials/footer.ejs %>
+
+<script src="/js/podcastPlayer.js"></script>
+<script>
+    // Initialize any required JS after the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        // Placeholder for any additional DOMContentLoaded code if needed
+    });
+</script>

@@ -1,0 +1,30 @@
+<% include ../partials/header.ejs %>
+
+<div id="articlesPage" class="content">
+    <h1>Explore the Topics</h1>
+    <p>Delve into a world of thought-provoking articles. Choose a path and see where it takes you.</p>
+    <div id="articleList" class="article-list">
+        <a href="/articles/legislation" class="article-preview">
+            <img src="/assets/images/topics/legislation.jpg" alt="Legislation">
+            <h2>Legislation</h2>
+            <p>Understanding the laws that govern us.</p>
+        </a>
+        <a href="/articles/justice" class="article-preview">
+            <img src="/assets/images/topics/justice.jpg" alt="Justice">
+            <h2>Justice</h2>
+            <p>Seeking fairness in a complex world.</p>
+        </a>
+        <!-- Repeat for each topic -->
+        <!-- ... -->
+    </div>
+</div>
+
+<div id="feedbackSection" class="feedback-section">
+    <h2>Have a Topic in Mind?</h2>
+    <form id="feedbackForm" action="/feedback" method="post">
+        <textarea name="suggestion" placeholder="Suggest a related topic (up to 1000 characters)" maxlength="1000"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<% include ../partials/footer.ejs %>

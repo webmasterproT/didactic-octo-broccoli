@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum - Cooperation | ChaseWhiteRabbit.com</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/forum.js" defer></script>
+</head>
+<body>
+    <header>
+        <!-- Navigation bar, can be included from a separate file for consistency -->
+        <!-- Example: <nav>...</nav> -->
+    </header>
+
+    <main id="forumContainer">
+        <h1>Cooperation</h1>
+        <p>Discuss and explore the power of cooperation in shaping society and driving progress.</p>
+        
+        <section id="forumTopics">
+            <!-- Forum topics will be dynamically loaded here -->
+        </section>
+
+        <button id="addTopicButton" onclick="displayAddTopicForm()">Add New Topic</button>
+        
+        <form id="addTopicForm" style="display:none;" onsubmit="handleNewTopic(event)">
+            <label for="topicTitle">Title:</label>
+            <input type="text" id="topicTitle" name="topicTitle" required>
+            
+            <label for="topicContent">Content:</label>
+            <textarea id="topicContent" name="topicContent" rows="4" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer id="footerNavigation">
+        <a href="/subscribe/index.html">Subscribe</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/legal.html">Legal</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/sitemap.html">Site Map</a>
+        <a href="/about.html">About</a>
+        <a href="/feedback.html">Feedback</a>
+    </footer>
+</body>
+</html>

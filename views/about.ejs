@@ -1,0 +1,32 @@
+<% include partials/header.ejs %>
+
+<div id="aboutPage" class="about-page">
+    <section class="about-intro">
+        <h1>Welcome to ChaseWhiteRabbit.com</h1>
+        <p>
+            Tia Astor invites you on a journey to explore the depths of thought and conversation, far beyond the conventional. 
+            In a world orchestrated by the whims of a mad hatter, it's time to break free from the tea party and join a community of like-minded individuals.
+        </p>
+    </section>
+
+    <section class="about-animation">
+        <div id="animationCanvas"></div>
+        <script src="/js/animation.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                initAnimation();
+            });
+        </script>
+    </section>
+
+    <section class="about-cta">
+        <div class="cta-container">
+            <div id="rabbitHoleButton" class="rabbit-hole-button">
+                <button class="invisible-button" onmouseover="handleRabbitHoleHover()" onclick="handleRabbitHoleClick()">Enter the Rabbit Hole</button>
+            </div>
+            <script src="/js/interactivity.js"></script>
+        </div>
+    </section>
+</div>
+
+<% include partials/footer.ejs %>

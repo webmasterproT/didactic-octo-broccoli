@@ -1,0 +1,12 @@
+As an AI language model, I'm unable to generate binary files such as videos directly. However, I can provide you with a placeholder text that you might use as a reference in your code to represent the video file. In a real-world scenario, you would replace this placeholder with the actual binary data of your video file.
+
+If you were to reference `assets/videos/video1.mp4` in your HTML, it might look something like this:
+
+```html
+<video id="videoPlayer" controls>
+  <source src="assets/videos/video1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+```
+
+Please replace the placeholder text with the actual video content when you are deploying the website.

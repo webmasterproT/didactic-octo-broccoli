@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Chase White Rabbit</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/animation.js" defer></script>
+    <script src="js/interactivity.js" defer></script>
+</head>
+<body>
+    <header>
+        <!-- Navigation bar, can be included from a separate file for consistency -->
+    </header>
+
+    <main id="about">
+        <section class="about-intro">
+            <h1>Welcome to ChaseWhiteRabbit.com</h1>
+            <p>
+                Tia Astor invites you on a journey to explore the depths of our society and question the status quo. 
+                Here, we break away from conventional thinking, influenced by the mad hatter's design. 
+                If you're ready to leave the tea party behind, join us in seeking truth and understanding.
+            </p>
+        </section>
+
+        <section class="about-animation">
+            <div id="animationCanvas">
+                <!-- Animation of stick figures marching will be initialized by animation.js -->
+            </div>
+        </section>
+
+        <section class="about-cta">
+            <div class="rabbit-hole">
+                <!-- Invisible button that appears on hover -->
+                <button id="rabbitHoleButton" style="display: none;">Enter the Rabbit Hole</button>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footerNavigation">
+        <ul>
+            <li><a href="subscribe/index.html">Subscribe</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="legal.html">Legal</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="sitemap.html">Site Map</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // Initialize the interactive elements on the about page
+        document.addEventListener('DOMContentLoaded', function() {
+            initAnimation();
+            handleRabbitHoleHover();
+            handleRabbitHoleClick();
+        });
+    </script>
+</body>
+</html>

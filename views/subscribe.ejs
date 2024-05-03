@@ -1,0 +1,44 @@
+<% include partials/header.ejs %>
+
+<div class="subscribe-container">
+  <h1>Join the Chase</h1>
+  <p>Subscribe to ChaseWhiteRabbit.com to stay updated on our latest explorations and insights.</p>
+  
+  <form id="subscribeForm" action="/subscription" method="post">
+    <div class="form-group">
+      <label for="email">Email Address<span>*</span></label>
+      <input type="email" id="email" name="email" required placeholder="Enter your email">
+    </div>
+    
+    <div class="form-group">
+      <label for="subscribeReason">Why do you want to subscribe? (optional)</label>
+      <textarea id="subscribeReason" name="subscribeReason" placeholder="Share your thoughts" maxlength="10000"></textarea>
+    </div>
+    
+    <div class="form-group checkbox-group">
+      <input type="checkbox" id="signup" name="signup">
+      <label for="signup">I also want to sign up for an account</label>
+    </div>
+    
+    <div class="form-group signup-reason" style="display: none;">
+      <label for="signupReason">Why do you want to sign up?<span>*</span></label>
+      <textarea id="signupReason" name="signupReason" placeholder="Your motivation for signing up" required minlength="500" maxlength="10000"></textarea>
+    </div>
+    
+    <button type="submit" class="btn-submit">Subscribe</button>
+  </form>
+</div>
+
+<% include partials/footer.ejs %>
+
+<script src="/js/subscription.js"></script>
+<script>
+  document.getElementById('signup').addEventListener('change', function() {
+    var signupReasonBox = document.querySelector('.signup-reason');
+    if (this.checked) {
+      signupReasonBox.style.display = 'block';
+    } else {
+      signupReasonBox.style.display = 'none';
+    }
+  });
+</script>

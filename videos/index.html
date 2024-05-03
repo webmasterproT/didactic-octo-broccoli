@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos | ChaseWhiteRabbit.com</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/videoPlayer.js"></script>
+</head>
+<body>
+    <header>
+        <!-- Navigation bar, can be included from a separate file for consistency -->
+    </header>
+
+    <main id="mainContent">
+        <section class="video-gallery">
+            <h1>Explore Our Videos</h1>
+            <div class="video-container" id="videoPlayer">
+                <!-- Video player will be initialized here -->
+            </div>
+            <div class="video-list">
+                <!-- List of videos with descriptions and thumbnails -->
+                <!-- Example video entry -->
+                <article class="video-entry">
+                    <img src="../assets/images/video_thumbnail1.jpg" alt="Video Title">
+                    <div class="video-info">
+                        <h2>Video Title</h2>
+                        <p>Short description of the video content...</p>
+                        <button onclick="initVideoPlayer('assets/videos/video1.mp4')">Play Video</button>
+                    </div>
+                </article>
+                <!-- More video entries can be added here -->
+            </div>
+        </section>
+    </main>
+
+    <footer id="footerNavigation">
+        <nav>
+            <ul>
+                <li><a href="subscribe/index.html">Subscribe</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="legal.html">Legal</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="disclaimer.html">Disclaimer</a></li>
+                <li><a href="sitemap.html">Site Map</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        // Initialize the video player functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            initVideoPlayer();
+        });
+    </script>
+</body>
+</html>
